@@ -1,3 +1,10 @@
+# Codex/ChatGPT development
+
+- Codex/ChatGPT is the repository's assumed development agent.
+- Repository instructions live in `AGENTS.md`; Codex-specific conventions live in [`.codex/README.md`](.codex/README.md).
+- Optional continuation notes live under `.codex/handoffs/`. Do not create `CLAUDE.md`, `.claude/`, or `docs/handoffs/` as alternate instruction or handoff locations.
+- A Codex handoff records verified implementation context and links to canonical GitHub issues. It never becomes a second backlog or status tracker.
+
 # Work tracking
 
 - All work items are GitHub issues, and no work item exists off the [Cairn Roadmap](https://github.com/users/ehussong/projects/6).

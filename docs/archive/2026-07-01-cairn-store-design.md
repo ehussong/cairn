@@ -462,7 +462,7 @@ Per-source shapes:
 
 ### 6.1 Server
 
-Python **FastMCP**, **Streamable HTTP** transport, stateless. Read-only Postgres role — the query surface physically cannot write (constraint 3 enforced at the grant level). Runs on the tailnet/VPN: network access *is* the baseline auth for local agents and Claude Code. If a hosted assistant (claude.ai, ChatGPT) must reach it later, expose one public hostname behind the reverse proxy and enable FastMCP's OAuth 2.1 resource-server support — hosted clients only speak OAuth; do not build static-bearer-token auth expecting them to use it. Tool results use `structuredContent` with declared `outputSchema`.
+Python **FastMCP**, **Streamable HTTP** transport, stateless. Read-only Postgres role — the query surface physically cannot write (constraint 3 enforced at the grant level). Runs on the tailnet/VPN: network access *is* the baseline auth for local agents and Codex. If ChatGPT or a hosted Codex environment must reach it later, expose one public hostname behind the reverse proxy and enable FastMCP's OAuth 2.1 resource-server support — hosted clients only speak OAuth; do not build static-bearer-token auth expecting them to use it. Tool results use `structuredContent` with declared `outputSchema`.
 
 ### 6.2 Tools (4)
 
