@@ -1,0 +1,27 @@
+{
+  "name": "cairn-router",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only MCP router for querying a personal corpus across existing sources.",
+  "scripts": {
+    "build": "tsc",
+    "query": "node dist/cli.js",
+    "dev": "tsx src/index.ts",
+    "dev:query": "tsx src/cli.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
