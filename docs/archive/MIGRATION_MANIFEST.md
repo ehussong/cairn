@@ -1,8 +1,10 @@
 # Work-tracking migration manifest
 
-Migration date: 2026-07-31  
-Repository: <https://github.com/ehussong/cairn>  
-Project: <https://github.com/users/ehussong/projects/6>  
+Migration date: 2026-07-31
+
+Repository: <https://github.com/ehussong/cairn>
+
+Project: <https://github.com/users/ehussong/projects/6>
 Owner / number: `ehussong` / `6`
 
 ## Discovery record
