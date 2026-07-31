@@ -13,6 +13,13 @@ results to an LLM with stable provenance fields.
 
 PDF search uses `pdftotext` when it is available on `PATH`.
 
+## Work tracking
+
+The [Cairn Roadmap](https://github.com/users/ehussong/projects/6) is the single
+source of truth for work. [roadmap.md](roadmap.md) is a generated summary of that
+board, not a separate backlog. Historical planning material is retained in
+[`docs/archive/`](docs/archive/).
+
 ## Run
 
 ```bash

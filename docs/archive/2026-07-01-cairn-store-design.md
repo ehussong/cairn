@@ -1,5 +1,7 @@
 # Cairn — Design: Personal Knowledge Store with a Single MCP Query Surface
 
+> Archived 2026-07-31 because the design and invariants remain valuable while delivery work moved to the [Cairn Roadmap](https://github.com/users/ehussong/projects/6). The Store track is gated by [issue #14](https://github.com/ehussong/cairn/issues/14).
+
 **Status:** Draft v2 for review — revised 2026-07-02 after a 7-lens adversarial design review (50 findings triaged, 29 upheld + 21 minor applied) · **Original:** 2026-07-01
 **Scope:** Concrete design artifacts per the design brief. Settled decisions from the brief are treated as constraints throughout; §10 flags the places where a constraint carries a genuine risk worth a conscious policy call.
 

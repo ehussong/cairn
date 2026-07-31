@@ -4,3 +4,4 @@ dist/
 cairn.config.json
 .DS_Store
 npm-debug.log*
+.serena/
