@@ -1,5 +1,7 @@
 # Cairn — Design: Personal Knowledge Store with a Single MCP Query Surface
 
+> Archived 2026-07-31 because the design and invariants remain valuable while delivery work moved to the [Cairn Roadmap](https://github.com/users/ehussong/projects/6). The Store track is gated by [issue #14](https://github.com/ehussong/cairn/issues/14).
+
 **Status:** Draft v2 for review — revised 2026-07-02 after a 7-lens adversarial design review (50 findings triaged, 29 upheld + 21 minor applied) · **Original:** 2026-07-01
 **Scope:** Concrete design artifacts per the design brief. Settled decisions from the brief are treated as constraints throughout; §10 flags the places where a constraint carries a genuine risk worth a conscious policy call.
 
@@ -460,7 +462,7 @@ Per-source shapes:
 
 ### 6.1 Server
 
-Python **FastMCP**, **Streamable HTTP** transport, stateless. Read-only Postgres role — the query surface physically cannot write (constraint 3 enforced at the grant level). Runs on the tailnet/VPN: network access *is* the baseline auth for local agents and Claude Code. If a hosted assistant (claude.ai, ChatGPT) must reach it later, expose one public hostname behind the reverse proxy and enable FastMCP's OAuth 2.1 resource-server support — hosted clients only speak OAuth; do not build static-bearer-token auth expecting them to use it. Tool results use `structuredContent` with declared `outputSchema`.
+Python **FastMCP**, **Streamable HTTP** transport, stateless. Read-only Postgres role — the query surface physically cannot write (constraint 3 enforced at the grant level). Runs on the tailnet/VPN: network access *is* the baseline auth for local agents and Codex. If ChatGPT or a hosted Codex environment must reach it later, expose one public hostname behind the reverse proxy and enable FastMCP's OAuth 2.1 resource-server support — hosted clients only speak OAuth; do not build static-bearer-token auth expecting them to use it. Tool results use `structuredContent` with declared `outputSchema`.
 
 ### 6.2 Tools (4)
 
