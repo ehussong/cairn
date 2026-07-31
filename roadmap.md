@@ -1,28 +1,42 @@
 # Cairn roadmap
 
-> Generated from the [Cairn Roadmap GitHub Project](https://github.com/users/ehussong/projects/6) on 2026-07-31. The Project is authoritative.
+> Generated from the [Cairn Roadmap GitHub Project](https://github.com/users/ehussong/projects/6). The Project is authoritative.
 
 ## Vision
 
 Cairn gives an external LLM one provenance-rich query surface over a personal corpus. The current product is a read-only Router over existing sources; a full corpus Store remains gated by evidence that routing alone cannot solve custody, duplication, portability, or platform lock.
 
-## Planning assumptions
-
-- **Availability:** no blackout was supplied; provisionally assume work may begin 2026-08-03 with about 6 focused hours per week.
-- **Cadence:** one Monday–Friday week per wave.
-- **WIP limit:** at most 3 open leaf tasks per wave.
-- **Scheduling rule:** blocked-by dependencies are hard constraints; priority and dates remain proposals that the human overrides on the board.
-
 ## Now / Next / Later
 
-These are proposals generated from the Project dependency graph and planning assumptions.
+This is the proposed execution order. Within each bucket, top is next up; blocked-by dependencies are hard constraints.
 
-- **Now — Wave 1, Aug 3–7:** [#6 Validate canonical cross-source queries](https://github.com/ehussong/cairn/issues/6); [#7 harden ranking, grouping, deduplication, and fanout](https://github.com/ehussong/cairn/issues/7).
-- **Next — Wave 2, Aug 10–14:** [#8 define the Router performance threshold and index trigger](https://github.com/ehussong/cairn/issues/8).
-- **Next — Wave 3, Aug 17–21:** [#9 integrate DEVONthink](https://github.com/ehussong/cairn/issues/9); [#10 add Fastmail](https://github.com/ehussong/cairn/issues/10); [#11 add Readwise](https://github.com/ehussong/cairn/issues/11).
-- **Later — Wave 4, Aug 24–28:** [#12 finalize safe mutation targeting](https://github.com/ehussong/cairn/issues/12); [#14 make the Store go/no-go decision](https://github.com/ehussong/cairn/issues/14).
-- **Later — Wave 5, Aug 31–Sep 4:** [#15 decide deletion policy](https://github.com/ehussong/cairn/issues/15); [#16 select the object store](https://github.com/ehussong/cairn/issues/16); [#17 select embeddings and verify external claims](https://github.com/ehussong/cairn/issues/17).
-- **Later — Wave 6, Sep 7–11:** [#13 implement audited Logseq writes](https://github.com/ehussong/cairn/issues/13); [#18 deliver Store Phase 0](https://github.com/ehussong/cairn/issues/18).
-- **Later — Waves 7–11, Sep 14–Oct 16:** Store Phases [#19](https://github.com/ehussong/cairn/issues/19), [#20](https://github.com/ehussong/cairn/issues/20), [#21](https://github.com/ehussong/cairn/issues/21), [#22](https://github.com/ehussong/cairn/issues/22), and [#23](https://github.com/ehussong/cairn/issues/23), one dependency-ordered phase per wave.
+### Now
 
-Adjust proposed priority and dates by dragging items on the [live Project](https://github.com/users/ehussong/projects/6); the board remains authoritative.
+1. [#6 Validate canonical cross-source Router queries](https://github.com/ehussong/cairn/issues/6)
+2. [#7 Harden normalized ranking, grouping, deduplication, and query fanout](https://github.com/ehussong/cairn/issues/7)
+
+Only two items are currently unblocked, so the Now bucket is intentionally below the usual 3–5 items.
+
+### Next
+
+1. [#8 Define Router performance threshold and optional local index trigger](https://github.com/ehussong/cairn/issues/8)
+2. [#9 Integrate DEVONthink with Cairn Router](https://github.com/ehussong/cairn/issues/9)
+3. [#10 Add a read-only Fastmail connector](https://github.com/ehussong/cairn/issues/10)
+4. [#11 Add a native read-only Readwise connector](https://github.com/ehussong/cairn/issues/11)
+5. [#12 Finalize stable mutation targeting and capability boundaries](https://github.com/ehussong/cairn/issues/12)
+6. [#13 Implement previewable, auditable Logseq write tools](https://github.com/ehussong/cairn/issues/13)
+7. [#14 Decide whether Router evidence justifies building Cairn Store](https://github.com/ehussong/cairn/issues/14)
+8. [#15 Decide source deletion versus archive retention policy](https://github.com/ehussong/cairn/issues/15)
+9. [#16 Select the S3-compatible object store](https://github.com/ehussong/cairn/issues/16)
+10. [#17 Select embedding provider and verify load-bearing external claims](https://github.com/ehussong/cairn/issues/17)
+
+### Later
+
+1. [#18 Store Phase 0: foundations](https://github.com/ehussong/cairn/issues/18)
+2. [#19 Store Phase 1: fsdir vertical slice with operational spine](https://github.com/ehussong/cairn/issues/19)
+3. [#20 Store Phase 2: Readwise ingestion](https://github.com/ehussong/cairn/issues/20)
+4. [#21 Store Phase 3: IMAP ingestion](https://github.com/ehussong/cairn/issues/21)
+5. [#22 Store Phase 4: reconciliation and recovery hardening](https://github.com/ehussong/cairn/issues/22)
+6. [#23 Store Phase 5: deferred non-foreclosing tracks](https://github.com/ehussong/cairn/issues/23)
+
+Adjust the proposal by reordering items on the [live Project](https://github.com/users/ehussong/projects/6); the board remains authoritative.

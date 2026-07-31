@@ -79,3 +79,11 @@ Every row passed a fresh `gh issue view` and appeared exactly once in a fresh `g
 - Release milestones were not replaced; defining them is a human decision.
 - Project scheduling uses `Priority`, `Start date`, and `Target date`. The earlier `Priority (proposed)` migration field was retired after values were written and verified.
 - The proposed dependency-respecting schedule and provisional availability assumptions are generated into `roadmap.md`.
+
+### Dateless sequencing correction
+
+- Removed the availability, cadence, wave, and date assumptions from `roadmap.md`.
+- Cleared all previously proposed Start date and Target date values, then removed both date fields from the Project.
+- Retained `Priority` as the only planning field and ordered every open leaf item explicitly on the Project.
+- Buckets follow Project order: Now `#6–#7`; Next `#8–#17`; Later `#18–#23`.
+- The Now bucket contains two items because they are the only currently unblocked leaves; adding a third would violate the hard dependency constraint.
