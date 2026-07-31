@@ -17,7 +17,7 @@ Owner / number: `ehussong` / `6`
 
 ## Manifest
 
-Every row passed a fresh `gh issue view` and appeared exactly once in a fresh `gh project item-list` read. Priority values are explicitly proposals.
+Every row passed a fresh `gh issue view` and appeared exactly once in a fresh `gh project item-list` read. Priority values are explicitly proposals. The milestone column records migration-time taxonomy; the five epic-mirroring milestones were removed in the subsequent sequencing cleanup because parent links already encode that membership.
 
 | ID | Summary | Source | Parent | Milestone | Proposed priority | Issue | Project item ID | Verification |
 |---|---|---|---|---|---|---|---|---|
@@ -71,3 +71,11 @@ Every row passed a fresh `gh issue view` and appeared exactly once in a fresh `g
 ## Verification result
 
 **23/23 VERIFIED; 0 FAILED.** No duplicate or stale issues existed, so none were closed. Phase 5 proceeded only after this result.
+
+## Sequencing cleanup addendum — 2026-07-31
+
+- Literal escape audit: zero issue bodies contained a literal `\\n`; no body edits were required.
+- Deleted redundant milestones: Roadmap governance; Router v0.2 — Reliable retrieval; Router v0.3 — Connected sources; Router v0.4 — Safe writes; Cairn Store — Gated future.
+- Release milestones were not replaced; defining them is a human decision.
+- Project scheduling uses `Priority`, `Start date`, and `Target date`. The earlier `Priority (proposed)` migration field was retired after values were written and verified.
+- The proposed dependency-respecting schedule and provisional availability assumptions are generated into `roadmap.md`.
