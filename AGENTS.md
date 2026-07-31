@@ -6,3 +6,5 @@
 - `roadmap.md` is generated from the Project board and must never be hand-grown into a parallel backlog.
 - Agents propose Priority and ordering for new items and during an explicit replan; they never silently reshuffle values or positions the human has adjusted, and treat every proposal as subordinate to the human's edits on the board.
 - **REPLAN:** when the human says “replan,” rebuild the ordered open-leaf list from current Project truth using blocked-by dependencies as hard constraints and epic progression plus judgment within that constraint; leave In Progress items and anything labeled `pinned` untouched; never move items the human has manually reordered above or below the proposed position without flagging it; apply item positions and Priority buckets; regenerate the Now / Next / Later section in `roadmap.md`; and report exactly what moved and why.
+- For bulk operations such as replans and batch issue creation, wait one second between writes and verify the result through single list calls rather than per-item reads.
+- On HTTP 403 or 429 responses, honor `Retry-After`, then resume from the last completed operation; never retry in a tight loop.
